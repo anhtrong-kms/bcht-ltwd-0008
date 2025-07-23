@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-F-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BÁO CÁO TÌNH HÌNH HỌC TẬP CUỐI HỌC PHẦN 4</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        /* General Body & Background */
+<style>
         body {
             font-family: 'Roboto', sans-serif;
-            background: #FFFFFF; /* Nền màu trắng tinh khiết */
+            background: #FFFFFF;
             display: flex;
             justify-content: center;
             align-items: flex-start;
@@ -17,41 +16,39 @@
             padding: 30px;
             margin: 0;
             box-sizing: border-box;
-            overflow-x: hidden; /* Prevent horizontal scroll */
+            overflow-x: hidden;
         }
 
-        /* Main Container - The "Glass" Element */
         .container {
-            background: rgba(255, 255, 255, 0.15); /* Slightly more opaque for better readability */
-            border-radius: 25px; /* More rounded corners */
-            border: 1px solid rgba(255, 255, 255, 0.3); /* Thicker, more defined border */
-            box-shadow: 0 10px 40px 0 rgba(31, 38, 135, 0.3); /* Stronger, softer shadow */
-            backdrop-filter: blur(20px) saturate(180%); /* Increased blur and saturation for liquid effect */
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 10px 40px 0 rgba(31, 38, 135, 0.3);
+            backdrop-filter: blur(20px) saturate(180%);
             -webkit-backdrop-filter: blur(20px) saturate(180%);
             padding: 50px;
-            max-width: 1200px; /* Đã tăng chiều rộng tối đa */
+            max-width: 1200px;
             width: 100%;
-            color: #2c3e50; /* Darker text for contrast */
+            color: #2c3e50;
             position: relative;
             overflow: hidden;
-            transition: all 0.3s ease-in-out; /* Smooth transitions for hover effects */
+            transition: all 0.3s ease-in-out;
         }
 
         .container:hover {
-            transform: translateY(-5px); /* Slight lift on hover */
-            box-shadow: 0 15px 50px 0 rgba(31, 38, 135, 0.4); /* Enhanced shadow on hover */
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px 0 rgba(31, 38, 135, 0.4);
         }
 
-        /* Decorative "Liquid" Blobs */
         .container::before,
         .container::after {
             content: '';
             position: absolute;
-            background: rgba(255, 255, 255, 0.2); /* Slightly more visible blobs */
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 50%;
-            filter: blur(40px); /* More blur for a softer glow */
+            filter: blur(40px);
             z-index: -1;
-            animation: float 10s ease-in-out infinite; /* Animation for floating effect */
+            animation: float 10s ease-in-out infinite;
         }
 
         .container::before {
@@ -70,7 +67,6 @@
             animation-delay: 2s;
         }
 
-        /* Keyframe Animation for Floating Blobs */
         @keyframes float {
             0% { transform: translate(0, 0); }
             25% { transform: translate(10px, -10px); }
@@ -79,13 +75,12 @@
             100% { transform: translate(0, 0); }
         }
 
-        /* Typography */
         h1, h2, h3 {
-            color: #1a2a3a; /* Even darker for headings */
+            color: #1a2a3a;
             text-align: center;
             margin-bottom: 25px;
             font-weight: 700;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
@@ -95,24 +90,23 @@
 
         h2 {
             font-size: 1.8em;
-            border-bottom: 2px solid rgba(44, 62, 80, 0.3); /* Slightly more prominent separator */
+            border-bottom: 2px solid rgba(44, 62, 80, 0.3);
             padding-bottom: 12px;
             margin-top: 40px;
         }
 
-        /* Section Styling */
         .section {
             margin-bottom: 35px;
-            background: rgba(255, 255, 255, 0.1); /* Lighter background for inner sections */
-            border-radius: 18px; /* Consistent rounding */
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 18px;
             padding: 30px;
             border: 1px solid rgba(255, 255, 255, 0.4);
-            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05), 0 5px 15px rgba(0, 0, 0, 0.1); /* Inner and outer shadow */
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05), 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease-in-out;
         }
 
         .section:hover {
-            transform: scale(1.01); /* Slight zoom on hover */
+            transform: scale(1.01);
             box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.08), 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
@@ -128,7 +122,7 @@
         }
 
         .section ul li {
-            background: rgba(255, 255, 255, 0.25); /* More distinct list items */
+            background: rgba(255, 255, 255, 0.25);
             border-radius: 12px;
             padding: 12px 20px;
             margin-bottom: 10px;
@@ -141,14 +135,18 @@
         }
 
         .section ul li:hover {
-            background: rgba(255, 255, 255, 0.4); /* Highlight on hover */
+            background: rgba(255, 255, 255, 0.4);
         }
 
         .section ul li strong {
             color: #2c3e50;
         }
 
-        /* Table Styling */
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
@@ -167,7 +165,7 @@
         }
 
         table th {
-            background: rgba(44, 62, 80, 0.8); /* Darker header for contrast */
+            background: rgba(44, 62, 80, 0.8);
             color: #fff;
             font-weight: 700;
             text-transform: uppercase;
@@ -175,20 +173,18 @@
         }
 
         table tr:nth-child(even) {
-            background: rgba(255, 255, 255, 0.08); /* Subtle stripe effect */
+            background: rgba(255, 255, 255, 0.08);
         }
 
         table tr:hover {
-            background: rgba(255, 255, 255, 0.25); /* Clearer hover state */
+            background: rgba(255, 255, 255, 0.25);
         }
 
-        /* Specific styling for 0 and -1 values */
         .attendance-0, .score-negative-1 {
-            color: #999999; /* Light gray color */
+            color: #999999;
             font-style: italic;
         }
 
-        /* Footer Styling */
         .footer {
             margin-top: 50px;
             padding: 35px;
@@ -264,8 +260,9 @@
             fill: #3498db;
             width: 20px;
             height: 20px;
-            flex-shrink: 0; /* Prevent SVG from shrinking */
+            flex-shrink: 0;
         }
+
         .note {
             font-style: italic;
             color: #555;
@@ -276,95 +273,34 @@
             border-radius: 8px;
         }
 
-        /* Responsive adjustments for tablets and phones */
-@media (max-width: 1024px) {
-    .container {
-        padding: 30px;
-    }
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
 
-    h1 {
-        font-size: 2em;
-    }
+            h1 {
+                font-size: 1.7em;
+            }
 
-    h2 {
-        font-size: 1.5em;
-    }
+            h2 {
+                font-size: 1.3em;
+            }
 
-    .section {
-        padding: 20px;
-    }
+            .table-wrapper {
+                overflow-x: auto;
+            }
 
-    .section ul li {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+            table th, table td {
+                white-space: nowrap;
+                font-size: 0.85em;
+                padding: 10px;
+            }
 
-    table th, table td {
-        padding: 12px;
-        font-size: 0.9em;
-    }
-
-    .footer {
-        padding: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 1.7em;
-    }
-
-    h2 {
-        font-size: 1.3em;
-    }
-
-    table {
-        display: block;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    table th, table td {
-        white-space: nowrap;
-    }
-
-    .contact-info {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .contact-info span {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.4em;
-    }
-
-    h2 {
-        font-size: 1.2em;
-    }
-
-    .section ul li {
-        font-size: 0.9em;
-    }
-
-    .footer strong {
-        font-size: 1em;
-    }
-
-    .contact-info span {
-        font-size: 0.85em;
-        padding: 8px 12px;
-    }
-}
-
+            .contact-info {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
     </style>
 </head>
 <body>
@@ -391,57 +327,58 @@
                 <li><strong>Ghi chú đặc biệt:</strong> Đỗ Vũ Hồng Sơn, Đặng Quang Huy, Trần Đình Thắng - Nghỉ học nhiều buổi</li>
                 <li>Trong đó, Đỗ Vũ Hồng Sơn và Trần Đình Thắng đã được chuyển trạng thái --> Bảo lưu/Nghỉ học</li>
             </ul>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>STT</th>
-                        <th>Họ và tên</th>
-                        <th colspan="12">ĐIỂM DANH BUỔI HỌC</th>
-                        <th>Tổng</th>
-                        <th>Tỉ lệ đi học</th>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <th></th>
-                        <th>1</th>
-                        <th>2</th>
-                        <th>3</th>
-                        <th>4</th>
-                        <th>5</th>
-                        <th>6</th>
-                        <th>7</th>
-                        <th>8</th>
-                        <th>9</th>
-                        <th>10</th>
-                        <th>11</th>
-                        <th>12</th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>1</td><td>Trần Huấn Hy</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>11</td><td>91.67%</td></tr>
-                    <tr><td>2</td><td>Trần Thanh Trúc</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>11</td><td>91.67%</td></tr>
-                    <tr><td>3</td><td>Trần Tuấn Minh</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>11</td><td>91.67%</td></tr>
-                    <tr><td>4</td><td>Huỳnh Thế Quân</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>1</td><td>1</td><td>9</td><td>75.00%</td></tr>
-                    <tr><td>5</td><td>Trần Minh Đức</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td>1</td><td>1</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td>8</td><td>66.67%</td></tr>
-                    <tr><td>6</td><td>Trần Phạm Quốc Nam</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>10</td><td>83.33%</td></tr>
-                    <tr><td>7</td><td>Lê Trần Gia Hân</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>1</td><td>1</td><td>11</td><td>91.67%</td></tr>
-                    <tr><td>8</td><td>Đỗ Vũ Hồng Sơn</td><td>1</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td>1</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td>1</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td>3</td><td>25.00%</td></tr>
-                    <tr><td>9</td><td>Nguyễn Tiến Minh Châu</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td>1</td><td>9</td><td>75.00%</td></tr>
-                    <tr><td>10</td><td>Đặng Quang Huy</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td>7</td><td>58.33%</td></tr>
-                    <tr><td>11</td><td>Nguyễn Gia Hiển</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>1</td><td>1</td><td>10</td><td>83.33%</td></tr>
-                    <tr><td>12</td><td>Kim Chí Bảo</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>10</td><td>83.33%</td></tr>
-                    <tr><td>13</td><td>Nguyễn Thành Phát</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>10</td><td>83.33%</td></tr>
-                    <tr><td>14</td><td>Nguyễn Đoàn Trung Anh</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>11</td><td>91.67%</td></tr>
-                    <tr><td>15</td><td>Mai Hoàng Khôi</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>9</td><td>75.00%</td></tr>
-                    <tr><td>16</td><td>Nguyễn Đức Minh</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>12</td><td>100.00%</td></tr>
-                    <tr><td>17</td><td>Trần Đình Thắng</td><td class="attendance-0">0</td><td>1</td><td>1</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td>2</td><td>16.67%</td></tr>
-                    <tr><td>18</td><td>Chử Quốc Bảo</td><td>1</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>8</td><td>66.67%</td></tr>
-                    <tr><td>19</td><td>Nguyễn Danh Nghĩa</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>1</td><td>10</td><td>83.33%</td></tr>
-                </tbody>
-            </table>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Họ và tên</th>
+                            <th colspan="12">ĐIỂM DANH BUỔI HỌC</th>
+                            <th>Tổng</th>
+                            <th>Tỉ lệ đi học</th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                            <th>8</th>
+                            <th>9</th>
+                            <th>10</th>
+                            <th>11</th>
+                            <th>12</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>Trần Huấn Hy</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>11</td><td>91.67%</td></tr>
+                        <tr><td>2</td><td>Trần Thanh Trúc</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>11</td><td>91.67%</td></tr>
+                        <tr><td>3</td><td>Trần Tuấn Minh</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>11</td><td>91.67%</td></tr>
+                        <tr><td>4</td><td>Huỳnh Thế Quân</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>1</td><td>1</td><td>9</td><td>75.00%</td></tr>
+                        <tr><td>5</td><td>Trần Minh Đức</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td>1</td><td>1</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td>8</td><td>66.67%</td></tr>
+                        <tr><td>6</td><td>Trần Phạm Quốc Nam</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>10</td><td>83.33%</td></tr>
+                        <tr><td>7</td><td>Lê Trần Gia Hân</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>1</td><td>1</td><td>11</td><td>91.67%</td></tr>
+                        <tr><td>8</td><td>Đỗ Vũ Hồng Sơn</td><td>1</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td>1</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td>1</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td>3</td><td>25.00%</td></tr>
+                        <tr><td>9</td><td>Nguyễn Tiến Minh Châu</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td>1</td><td>9</td><td>75.00%</td></tr>
+                        <tr><td>10</td><td>Đặng Quang Huy</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td>7</td><td>58.33%</td></tr>
+                        <tr><td>11</td><td>Nguyễn Gia Hiển</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>1</td><td>1</td><td>10</td><td>83.33%</td></tr>
+                        <tr><td>12</td><td>Kim Chí Bảo</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>10</td><td>83.33%</td></tr>
+                        <tr><td>13</td><td>Nguyễn Thành Phát</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>10</td><td>83.33%</td></tr>
+                        <tr><td>14</td><td>Nguyễn Đoàn Trung Anh</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>11</td><td>91.67%</td></tr>
+                        <tr><td>15</td><td>Mai Hoàng Khôi</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>9</td><td>75.00%</td></tr>
+                        <tr><td>16</td><td>Nguyễn Đức Minh</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>12</td><td>100.00%</td></tr>
+                        <tr><td>17</td><td>Trần Đình Thắng</td><td class="attendance-0">0</td><td>1</td><td>1</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td>2</td><td>16.67%</td></tr>
+                        <tr><td>18</td><td>Chử Quốc Bảo</td><td>1</td><td class="attendance-0">0</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>8</td><td>66.67%</td></tr>
+                        <tr><td>19</td><td>Nguyễn Danh Nghĩa</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td class="attendance-0">0</td><td>1</td><td>1</td><td>1</td><td>10</td><td>83.33%</td></tr>
+                    </tbody>
+                </table>
+            </div>
             <p style="color: #5a6a7a;">TỈ LỆ CHUYÊN CẦN TRUNG BÌNH: 75.44%</p>
             <p class="note">Lưu ý: Các điểm số "0" thể hiện học viên vắng buổi học tương ứng.</p>
 
@@ -460,7 +397,7 @@
                 </li>
                 <li><strong>Nhận xét chung:</strong> Học viên đã hình thành kỹ năng sử dụng Python cơ bản và áp dụng vào giải quyết bài toán thuật toán.</li>
             </ul>
-
+            <div class="table-wrapper">
             <table>
                 <thead>
                     <tr>
@@ -509,6 +446,7 @@
                     <tr><td>19</td><td>Nguyễn Danh Nghĩa</td><td>8</td><td>7</td><td>6</td><td>5,8</td><td>7</td><td class="score-negative-1">-1</td><td>8,2</td><td>8</td><td>8,4</td><td>8</td><td>7,38</td><td>73,78%</td></tr>
                 </tbody>
             </table>
+            </div>
             <p class="note">Lưu ý: Các điểm số "-1" thể hiện học viên vắng buổi học tương ứng và không nộp bài.</p>
         </div>
 
@@ -532,7 +470,7 @@
                     </ul>
                 </li>
             </ul>
-
+            <div class="table-wrapper">
             <table>
                 <thead>
                     <tr>
@@ -568,6 +506,7 @@
                     <tr><td>Trần Thanh Trúc</td><td>PROBLEM SOLVING (INTERMEDIATE)</td><td><a href="https://www.hackerrank.com/certificates/5d721674ac17" target="_blank">https://www.hackerrank.com/certificates/5d721674ac17</a></td></tr>
                 </tbody>
             </table>
+            </div>
         </div>
 
         <div class="footer">
